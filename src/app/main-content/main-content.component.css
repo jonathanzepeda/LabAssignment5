@@ -1,0 +1,10 @@
+.main-container-grid {
+    display: grid;
+    grid-template-columns: 2fr 5fr 2fr;
+    height: 100%;
+  }
+
+  .main-container-grid h1 {
+    color:gray;
+    text-align: center;
+    }
