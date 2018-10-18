@@ -8,13 +8,19 @@ interface IStudent {
   Course: string;
 }
 @Component({
+  // tslint:disable-next-line:component-selector
   selector: 'main-content',
   templateUrl: './main-content.component.html',
   styleUrls: ['./main-content.component.css']
 })
+
 export class MainContentComponent implements OnInit {
 
+
+
   students: Array<IStudent> = [];
+
+  editMode = false;
 
   constructor() {
     this.students[0] = {
@@ -41,13 +47,24 @@ export class MainContentComponent implements OnInit {
   }
 
 addStudent() {
+  this.editMode = true;
   const student = {
-    id: 1,
-    firstName: 'Kenny',
-    lastName: 'Keys',
-    Course: 'Engineering'
+    id: null,
+    firstName: null,
+    lastName: null,
+    Course: null
   };
-  this.students.push(student);
+
+  // this.students.push(student);
+  this.students.unshift(student);
 }
 
+removeStudent(index: number) {
+  console.log('from removeStudent function index: ', index);
+  this.students.splice(index, 1);
+  }
+
+saveStudent() {
+  this.editMode = false;
+  }
 }
