@@ -1,4 +1,5 @@
 /* You can add global styles to this file, and also import other style files */
+@import '~@angular/material/prebuilt-themes/pink-bluegrey.css';
 * {
     margin: 0px;
     padding: 0px;
@@ -12,14 +13,10 @@
 
   .align-center {
     margin: 15px;
-    border: 6px groove #ccc;
-    border-top-right-radius: 25px;
-    border-bottom-left-radius: 25px;
-
-    font-size: 1.5em;
-    font-weight: bold;
-    text-align: center;
-    /* color: gray; */
   }
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.nav-button {
+  margin-right: 8px !important;
+}

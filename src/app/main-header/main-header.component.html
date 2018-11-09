@@ -1,9 +1,16 @@
-<header class="main-header">
-  <div class="align-center">
-    r1c1
-  </div>
+<!-- <header class="main-header">
+  <div class="align-center">r1c1</div>
   <div id="banner" class="align-center" (mouseenter)="showGreeting()" (mouseleave)="hideGreeting()">r1c2</div>
-  <div class="align-center">
-    r1c3
+  <div class="align-center">r1c3</div>
+</header> -->
+<mat-toolbar color="primary" class="main-header">
+  <div class="align-center">LOGO</div>
+  <div id="banner" class="align-center">
+      <button mat-raised-button color="accent" class="nav-button">Home</button>
+      <button mat-raised-button color="accent" class="nav-button">Courses</button>
   </div>
-</header>
+  <div class="align-center">
+    <mat-icon class="example-icon">favorite</mat-icon>
+    <mat-icon class="example-icon">delete</mat-icon>
+  </div>
+</mat-toolbar>

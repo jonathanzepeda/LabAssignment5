@@ -1,6 +1,8 @@
 .main-header {
-  background-color: #af0000;
+  /* background-color: #af0000; */
   display: grid;
   grid-template-columns: 2fr 5fr 2fr;
   height: 100%;
 }
+
+

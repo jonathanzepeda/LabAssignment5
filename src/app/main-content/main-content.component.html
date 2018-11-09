@@ -4,13 +4,10 @@
   </div>
   <div class="align-center">
     <p></p>
-    <!-- <button (click)="addStudent()" class="add-button">Add Student</button> -->
-    <button (click)="addStudent()" type="button" class="btn btn-default add-button" aria-label="Left Align">
-      Add Student
-    </button>
-    <button (click)="saveStudent()" type="button" class="btn btn-default add-button" aria-label="Left Align">
-      Save
-    </button>
+
+    <button (click)="addStudent()" mat-raised-button color="accent" class="btn btn-default add-button">Add Student</button>
+    <button (click)="saveStudent()" mat-raised-button color="accent" class="btn btn-default add-button">Save</button>
+
     <table class="table-one">
       <thead>
         <tr>
@@ -28,9 +25,13 @@
           <td>{{student.lastName}}</td>
           <td>{{student.Course}}</td>
           <td>
-            <button (click)="removeStudent(i)" type="button" class="align-right btn btn-default add-button" aria-label="Left Align">
-              X
+            <button (click)="removeStudent(i)" mat-raised-button color="warn" class="align-right btn btn-default add-button">
+                <mat-icon>delete</mat-icon>
             </button>
+              
+            <!-- <button (click)="removeStudent(i)" type="button" class="align-right btn btn-default add-button" aria-label="Left Align">
+              X
+            </button> -->
           </td>
         </tr>
       </tbody>
@@ -40,10 +41,12 @@
             <input [(ngModel)]="student.id" type="text" class="form-control" placeholder="ID" aria-describedby="basic-addon2">
           </td>
           <td>
-            <input [(ngModel)]="student.firstName" type="text" class="form-control" placeholder="First Name" aria-describedby="basic-addon2">
+            <input [(ngModel)]="student.firstName" type="text" class="form-control" placeholder="First Name"
+              aria-describedby="basic-addon2">
           </td>
           <td>
-            <input [(ngModel)]="student.lastName" type="text" class="form-control" placeholder="Last Name" aria-describedby="basic-addon2">
+            <input [(ngModel)]="student.lastName" type="text" class="form-control" placeholder="Last Name"
+              aria-describedby="basic-addon2">
           </td>
           <td>
             <input [(ngModel)]="student.Course" type="text" class="form-control" placeholder="Course" aria-describedby="basic-addon2">
