@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
+  // tslint:disable-next-line:component-selector
   selector: 'main-header',
   templateUrl: './main-header.component.html',
   styleUrls: ['./main-header.component.css']
@@ -9,10 +11,16 @@ export class MainHeaderComponent implements OnInit {
 
   private firstName: string;
   private lastName: string;
-  constructor() {
+
+  constructor(private router: Router) {
     this.firstName = 'Jonathan';
     this.lastName = 'Zepeda';
   }
+
+goToPage(path: string) {
+  console.log('from goToPage path: ', path);
+  this.router.navigate([path]);
+}
 
 
 showGreeting() {

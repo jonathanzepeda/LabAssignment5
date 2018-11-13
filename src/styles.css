@@ -15,8 +15,28 @@
     margin: 15px;
   }
 html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+body { margin: 0; color: white; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
 .nav-button {
   margin-right: 8px !important;
+}
+
+.table {
+  width: 100%;
+  border: 1px solid #CCC;
+}
+
+.table > tbody > tr > td, .table > thead > tr > td {
+  border: 1px solid #CCC;
+  min-height: 50px;
+  padding: .5em;
+}
+
+h3 {
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+table {
+  table-layout: fixed;
 }

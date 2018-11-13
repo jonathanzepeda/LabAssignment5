@@ -6,11 +6,11 @@
 <mat-toolbar color="primary" class="main-header">
   <div class="align-center">LOGO</div>
   <div id="banner" class="align-center">
-      <button mat-raised-button color="accent" class="nav-button">Home</button>
-      <button mat-raised-button color="accent" class="nav-button">Courses</button>
+      <button mat-raised-button color="accent" class="nav-button" (click)="goToPage('')">Home</button>
+      <button mat-raised-button color="accent" class="nav-button"(click)="goToPage('courses')">Courses</button>
   </div>
   <div class="align-center">
-    <mat-icon class="example-icon">favorite</mat-icon>
-    <mat-icon class="example-icon">delete</mat-icon>
+    <!-- <mat-icon class="example-icon">favorite</mat-icon>
+    <mat-icon class="example-icon">delete</mat-icon> -->
   </div>
 </mat-toolbar>
